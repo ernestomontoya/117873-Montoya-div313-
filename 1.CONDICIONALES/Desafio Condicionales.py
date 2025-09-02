@@ -84,26 +84,35 @@ Todas las facturas incluyen un cargo fijo de $7000 además del costo por consumo
 
 El costo por metro cúbico (m³) de agua es de $200/m³."""
 
-
-
-
-
 cargo_fijo = 7000 # ademas de costo por consumo
-costo_x_metro = 200 # $200/m³
-iva = 21 # a todos los casos aplico el iva del 21%
-porcentaje = 0
-bonificacion = 0
-recargo = 0
-subtotal_con_bonificaciones = 0
-subtotal_con_recargo = 0
-porcentaje_beneficio = 0
-porcentaje_recargo = 0
-total_con_iva = 0
-total_con_recargo_mas_iva = 0
-total_con_bonificacion_mas_iva = 0
-subtotal_de_consumo = 0
-iva_aplicado_a_consumo = 0
 
+costo_x_metro = 200 # $200/m³
+
+iva = 21 # a todos los casos aplico el iva del 21%
+
+porcentaje = 0
+
+bonificacion = 0
+
+recargo = 0
+
+subtotal_con_bonificaciones = 0
+
+subtotal_con_recargo = 0
+
+porcentaje_beneficio = 0
+
+porcentaje_recargo = 0
+
+total_con_iva = 0
+
+total_con_recargo_mas_iva = 0
+
+total_con_bonificacion_mas_iva = 0
+
+subtotal_de_consumo = 0
+
+iva_aplicado_a_consumo = 0
 
 metros_consumidos = float(input("Ingresar la cantidad de metros de agua consumidos: "))
 
@@ -169,5 +178,3 @@ if metros_consumidos > 0:
         print(f" El IVA aplicado al consumo es: ${iva_aplicado_a_consumo}\n El total con IVA es: ${total_con_iva}")
 else:
     print("INGRESE UN NUMERO MAYOR A CERO")
-
-

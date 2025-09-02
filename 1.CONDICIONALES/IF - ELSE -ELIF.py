@@ -5,12 +5,11 @@ Entre 160 cm y 179 cm: Escolta
 Entre 180 cm y 199 cm: Alero
 200 cm o más: Ala-Pívot o Pívot
 """
-
 ##pido el ingreso de la altura
 
 # altura = float(input("INGRESE LA ALTURA DEL JUGADOR en centimetros: "))
 
-# #
+##
 # if  altura >= 200:
 #     mensaje = "El jugador sera Ala-Pivot o Pivot"
 # elif altura >= 180:
@@ -37,7 +36,7 @@ Calcular una nota aleatoria entre el 1 y el 10 inclusive, para luego mostrar un 
 
 # import random
 
-# # nota aleatoria de forma automatica
+# #nota aleatoria de forma automatica
 # nota = random.randint(1, 10)
 
 # #comparo 
