@@ -9,9 +9,9 @@ def ingresar_numero_entero(mensaje:str)-> int:
     RECIBE UN MENSAJE PIDIENDO EL NUMERO
 
     RETORNA EL NUMERO ENTERO
-    
+
     """
-    
+
     numero = int(input(mensaje))
 
     return numero
@@ -31,7 +31,7 @@ def ingresar_numero_flotante(mensaje:str)-> int:
     RECIBE UN MENSAJE PIDIENDO EL NUMERO
 
     RETORNA EL NUMERO FLOTANTE
-    
+
     """
     numero = float(input(mensaje))
     return numero
@@ -39,7 +39,7 @@ def ingresar_numero_flotante(mensaje:str)-> int:
 # numero = ingresar_numero_flotante("ingresar un numero flotante: ")
 # print(f"INGRESASTE EL NUMERO: {numero}")
 
-#^ Crear una función que le solicite al usuario el ingreso de una cadena y la retorne. 
+#^ Crear una función que le solicite al usuario el ingreso de una cadena y la retorne.
 
 def pedir_cadena(mensaje:str)->str:
     """
@@ -51,7 +51,7 @@ def pedir_cadena(mensaje:str)->str:
 # pedido = pedir_cadena("ingresa un mensaje/cadena: ")
 # print(f"INGRESASTE EL SIGUIENTE MENSAJE:\n{pedido}")
 
-#^ Escribir una función que calcule el área de un rectángulo. La función recibe la base y la altura y retorna el área. 
+#^ Escribir una función que calcule el área de un rectángulo. La función recibe la base y la altura y retorna el área.
 
 def calcular_area_rectangulo(base: int|float ,altura: int|float)-> int|float:
     """
@@ -114,6 +114,8 @@ def verificar_paridad(numero: int)-> str:
 
 #^ Crea una función que verifique si un número dado es par o impar. La función retorna True si el número es par, False en caso contrario.
 
+
+
 def verificar_paridad(numero: int)-> bool:
     """
     LA FUNCION ME DICE SI EL NUMERO INGRESADO ES O NO PAR\n
@@ -121,7 +123,7 @@ def verificar_paridad(numero: int)-> bool:
     RETORNA TRUE SI EL NUMERO ES PAR O FALSE SI NO ES PAR
     """
     if numero % 2 == 0:
-        resultado = True    
+        resultado = True
     else:
         resultado = False
     return resultado
@@ -135,9 +137,9 @@ def calcular_maximo(numero_a: int, numero_b: int ,numero_c: int)-> int:
     """
     LA FUNCION CALCULA EL MAXIMO NUMERO ENTRE TRES VALORES\n
     RECIBE 3 NUMEROS ENTEROS\n
-    RETORNA EL VALOR ENTERO MAS GRANDE 
+    RETORNA EL VALOR ENTERO MAS GRANDE
     """
-    max_numero = numero_a 
+    max_numero = numero_a
     if numero_b > max_numero:
         max_numero = numero_b
     if numero_c > max_numero:
@@ -163,9 +165,26 @@ def calcular_potencia(base: int|float, exponente: int|float)-> int|float:
 #^ Crear una función que reciba un número y retorne True si el número es primo, False en caso contrario.
 
 
+def verificar_nro_primo(numero: int)-> bool:
+    """
+    LA FUNCION SE VERIFICA SI EL NUMERO INGRESADO ES PRIMO\n
+    RECIBE UN NUMERO ENTERO\n
+    RETORNA UN BOOLEANO TRUE SI ES PRIMO FALSE SI NO LO ES
+    """
+    bandera = True
+    for i in range(2,numero):
+        if numero % i == 0:
+            bandera = False
+            break
+    if bandera == False or numero < 2:
+        estado = False
+    else:
+        estado = True
+    return estado
+
+
 
 #^ Crear una función que (utilizando el algoritmo del ejercicio de la guia de for), muestre todos los números primos comprendidos entre entre la unidad y un número ingresado como parámetro. La función retorna la cantidad de números primos encontrados. Modularizar todo lo posible.
-
 
 
 #^ Crear una función que imprima la tabla de multiplicar de un número recibido como parámetro. La función debe aceptar parámetros opcionales (inicio y fin) para definir el rango de multiplicación. Por defecto es del 1 al 10.

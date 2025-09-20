@@ -120,16 +120,16 @@
 #^Ingresar un número. Mostrar cada número primo que hay entre el 1 y el número ingresado. Informar cuántos números primos se encontraron.
 
 
-contador = 0
-numero = int(input("Ingresa un numero: "))
+# contador = 0
+# numero = int(input("Ingresa un numero: "))
 
-for i in range(2,numero+1):
-    bandera = True
-    for j in range(2,i):
-        if i % j == 0:
-            bandera = False
-            break
-    if bandera == True:
-        contador += 1
-        print(i)
-print(f"Se encontraron {contador} numeros primos.\n")
+# for i in range(2,numero+1): #no considero 1 porque ya se que no es primo // uso el for para ir desde 2 al nro ingresado. por eso +1 para incluirlo
+#     bandera = True # mientras que la bandera sea true sera numero primo
+#     for j in range(2,i): # uso este for para ver si la division entre el numero i(dividendo) por cada numero j(que ira desde 2 hasta i) da resto cero
+#         if i % j == 0:
+#             bandera = False # cambia estado de bandera(no sera primo) cuando el resto es igual a cero
+#             break # si la division con alguno de los divisores es igual a cero cambia el estado de la bandera y  con este break cierro este bucle
+#     if bandera == True: # si la bandera se mantiene en estado verdadero, significa que el numero a analizar 
+#         contador += 1 # sumo 1 por cada numero primo encontrado
+#         print(i) # imprimo el valor de ese numero primo encontrado
+# print(f"Se encontraron {contador} numeros primos.\n")
