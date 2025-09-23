@@ -187,9 +187,73 @@ def verificar_nro_primo(numero: int)-> bool:
 #^ Crear una función que (utilizando el algoritmo del ejercicio de la guia de for), muestre todos los números primos comprendidos entre entre la unidad y un número ingresado como parámetro. La función retorna la cantidad de números primos encontrados. Modularizar todo lo posible.
 
 
+def ingresar_nro_entero_positivo(mensaje:str,error_mensaje)-> int:
+    """
+    LA FUNCION PIDE UN NUMERO ENTERO POSITIVO Y LO RETORNA
+
+    RECIBE UN MENSAJE PIDIENDO EL NUMERO
+
+    RETORNA EL NUMERO ENTERO POSITIVO
+
+    """
+    numero = int(input(mensaje))
+    while numero < 1:
+        numero = int(input(error_mensaje))
+    return numero
+
+
+
+
+def numero_primo_encontrado(numero : int)-> int:
+    """
+    LA FUNCION SE ENCARGA DE BUSCAR Y MOSTRAR LOS NUMEROS PRIMOS QUE HAY HASTA EL NUMERO DADO\n
+
+    RECIBE EL NUMERO AL HASTA DONDE QUIERO CALCULAR SI HAY PRIMOS\n
+
+    RETORNA LA CANTIDAD DE NUMEROS ENCONTRADOS Y LOS MUESTRA
+    """
+    contador = 0
+    for i in range(2,numero + 1):
+        if verificar_nro_primo(i):
+            contador += 1
+            print(i)
+    return contador
+
+
+# nro = ingresar_nro_entero_positivo("INGRESA UN NUMERO ENTERO POSITIVO: ", "ERROR.EL NUMERO DEBE SER POSITIVO: ")
+
+# primos_encontrados = numero_primo_encontrado(nro)
+
+
+# print(f"SE ENCONTRARON {primos_encontrados} NUMEROS PRIMOS")
+
+
+"""
+numero = ingresar_nro_entero_positivo("INGRESA UN NUMERO ENTERO POSITIVO: ", "ERROR.EL NUMERO DEBE SER POSITIVO: ")
+
+
+def numero_primo_encontrado(numero:int):
+    contador = 0
+    for i in range(2,numero+1): 
+        bandera = True 
+        for j in range(2,i): 
+            if i % j == 0:
+                bandera = False 
+                break 
+        if bandera == True: 
+            contador += 1 
+            print(i) 
+    return contador
+
+
+numero_primo = numero_primo_encontrado(numero)
+
+print(f"Se encontraron {numero_primo} numeros primos.\n")
+"""
+
+
 #^ Crear una función que imprima la tabla de multiplicar de un número recibido como parámetro. La función debe aceptar parámetros opcionales (inicio y fin) para definir el rango de multiplicación. Por defecto es del 1 al 10.
 
 
 
 #^ Especializar las funciones del punto 1, 2 y 3 para hacerlas reutilizables. Agregar validaciones.
-
