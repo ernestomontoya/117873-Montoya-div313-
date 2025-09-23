@@ -254,6 +254,13 @@ print(f"Se encontraron {numero_primo} numeros primos.\n")
 
 #^ Crear una función que imprima la tabla de multiplicar de un número recibido como parámetro. La función debe aceptar parámetros opcionales (inicio y fin) para definir el rango de multiplicación. Por defecto es del 1 al 10.
 
+def calcular_multiplicacion(numero,numero_inicial = 1, numero_final = 10):
+    for i in range(numero_inicial,numero_final + 1):
+        print(f"{numero} x {i} = {numero * i}")
+    
+
+# numero = ingresar_numero_entero("INGRESA UN NUMERO A MULTIPLICAR: ")
+# calcular_multiplicacion(numero)
 
 
 #^ Especializar las funciones del punto 1, 2 y 3 para hacerlas reutilizables. Agregar validaciones.
