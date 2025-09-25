@@ -298,3 +298,5 @@ def pedir_cadena(mensaje="Ingresa texto: ", min_len=None, max_len=None, no_vacio
             print(f"Máximo {max_len} caracteres")
             continue
         return texto
+    
+print(pedir_entero())
