@@ -81,3 +81,13 @@ Dicho repositorio deberá ser privado. Agregar a sus profesores como colaborador
 # mínimo: valor mínimo admitido (inclusive)
 # máximo: valor máximo admitido (inclusive)
 # reintentos: cantidad de veces que se volverá a pedir el dato en caso de error.
+
+
+
+numero = input("ingrese un numero: ")
+numero=int(numero)
+while type(numero) == int:
+    numero = int(input("reingrese un numero: "))
+
+FileNotFoundError
+print(numero,13231)
